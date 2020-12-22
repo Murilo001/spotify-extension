@@ -11,6 +11,8 @@
 .header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .spotify-logo {
@@ -21,4 +23,28 @@
   max-width: 100%;
   width: 200px;
   height: 100px;
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  padding: 16px 14px 18px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border-width: 0;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000;
 }
