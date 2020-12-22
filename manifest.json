@@ -8,5 +8,15 @@
     "default_popup": "popup.html"
   },
 
-  "permissions": ["activeTab"]
+  "permissions": ["providerUrl", "tabs", "storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/robots.txt*"],
+      "js": ["libs/chrome-ex-oauth2/injection.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": ["libs/*"]
 }

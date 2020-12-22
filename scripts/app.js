@@ -18,3 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, false);
 }, false);
+
+
+const loginButton = document.getElementById('button');
+document.addEventListener('click', function () {
+  window.oauth2.start();
+});
