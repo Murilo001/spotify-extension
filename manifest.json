@@ -8,7 +8,12 @@
     "default_popup": "popup.html"
   },
 
-  "permissions": ["providerUrl", "tabs", "storage"],
+  "permissions": [
+    "https://sdk.scdn.co/spotify-player.js",
+    "https://accounts.spotify.com/api/token",
+    "tabs",
+    "storage"
+  ],
 
   "content_scripts": [
     {
@@ -17,6 +22,8 @@
       "run_at": "document_start"
     }
   ],
+
+  "content_security_policy": "object-src 'self'; script-src 'self' https://sdk.scdn.co/spotify-player.js",
 
   "web_accessible_resources": ["libs/*"]
 }
